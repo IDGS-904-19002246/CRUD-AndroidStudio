@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Profeciones</string>
+
+    <string name="titulo">Profeciones</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_button_description">Add Item</string>
+
+    <string name="nombre">nombre</string>
+    <string name="descripcion">descripcion</string>
+    <string name="nivel_educativo">nivel_educativo</string>
+    <string name="salario_promedio">salario_promedio</string>
+    <string name="puestos_disponibles">puestos_disponibles</string>
+    <string name="titulados">titulados</string>
+
+    <string name="ingles_nivel">ingles_nivel</string>
+    <string name="estado">estado</string>
+
+    <string-array name="ingles_nivel_opciones">
+        <item>Ninguno</item>
+        <item>Basico</item>
+        <item>Medio</item>
+        <item>Alto</item>
+    </string-array>
+
+    <string-array name="estado_opciones">
+        <item>No Verificado</item>
+        <item>Verificado</item>
+        <item>Eliminado</item>
+    </string-array>
+
+
+
+    <string name="guardar">Guardar</string>
+    <string name="borrar">Borrar</string>
+
+</resources>
