@@ -1,5 +1,6 @@
 package com.example.profeciones.adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.profeciones.MainActivity;
 import com.example.profeciones.R;
 import com.example.profeciones.models.ClsProfeciones;
 
@@ -49,6 +51,11 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.Vista> {
 //        holder.petNameTextView.setText(pet.getName());
         holder.itemView.setOnClickListener(view ->{
             onClickItem.onPetClick(item);
+//            alertDialogBuilder = new AlertDialog.Builder(C);
+//            final View V = LayoutInflater.from(C).inflate(R.layout.profeciones_form, null);
+//            alertDialogBuilder.setView(V);
+//            alertDialog = alertDialogBuilder.create();
+//            alertDialog.show();
 //            Toast.makeText(C, "# "+item.getNombre(), Toast.LENGTH_SHORT).show();
         });
     }
