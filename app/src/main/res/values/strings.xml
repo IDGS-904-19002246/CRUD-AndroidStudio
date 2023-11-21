@@ -29,7 +29,21 @@
         <item>Eliminado</item>
     </string-array>
 
+    <string-array name="estado_db">
+        <item>En servicio</item>
+        <item>Fuera de servicio</item>
+        <item>Eliminada</item>
+    </string-array>
+    <string-array name="tipo_db">
+        <item>SQL</item>
+        <item>NO-SQL</item>
+    </string-array>
 
+    <string-array name="tipo_dia">
+        <item>religion</item>
+        <item>necional</item>
+        <item>regional</item>
+    </string-array>
 
     <string name="guardar">Guardar</string>
     <string name="borrar">Borrar</string>

@@ -65,12 +65,7 @@ public class MainActivity extends AppCompatActivity {
 //    -----------------------------------------------------------------------------------------
 
         lista = new ArrayList<>();
-//        datos_basura();
-//        adaptador = new Adaptador(this, lista);
-//        recycler.setAdapter(adaptador);
-
         api = retro.getClient().create(api_inter.class);
-//        datos();
         adaptador = new Adaptador(MainActivity.this,lista);
         recycler.setAdapter(adaptador);
         select();
@@ -277,36 +272,22 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
     private void select(){
-    Call<List<ClsProfeciones>> call = api.TODAS();
-    call.enqueue(new Callback<List<ClsProfeciones>>() {
-        @Override
-        public void onResponse(Call<List<ClsProfeciones>> call, Response<List<ClsProfeciones>> response) {
-            lista = response.body();
-            adaptador = new Adaptador(MainActivity.this,lista);
-            recycler.setAdapter(adaptador);
-//            //    -----------------------------------------------------------------------------------------
+        Call<List<ClsProfeciones>> call = api.TODAS();
+        call.enqueue(new Callback<List<ClsProfeciones>>() {
+            @Override
+            public void onResponse(Call<List<ClsProfeciones>> call, Response<List<ClsProfeciones>> response) {
+                lista = response.body();
+                adaptador = new Adaptador(MainActivity.this,lista);
+                recycler.setAdapter(adaptador);
+    //            //    -----------------------------------------------------------------------------------------
 
-            adaptador.setOnClickItem(pro -> {
-                edit(pro);
-            });
-        }
-        @Override
-        public void onFailure(Call<List<ClsProfeciones>> call, Throwable t) {}
-    });
-
-}
-    public void datos(){
-        lista.add(new ClsProfeciones(1,"juan","56","nivel_educativo",156,165,20,"Basico","Verificado"));
-        lista.add(new ClsProfeciones(2,"juan jose","56","nivel_educativo",156,165,20,"Basico","Verificado"));
-        lista.add(new ClsProfeciones(3,"juan jose de jesus","56","nivel_educativo",156,165,20,"Basico","Verificado"));
+                adaptador.setOnClickItem(pro -> {
+                    edit(pro);
+                });
+            }
+            @Override
+            public void onFailure(Call<List<ClsProfeciones>> call, Throwable t) {}
+        });
     }
-//    public boolean validar(String[] campos){
-//
-//        for (String c:campos) {
-//            if (c == "" && c == " " && c == null){
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
+
 }
